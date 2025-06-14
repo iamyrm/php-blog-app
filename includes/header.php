@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,14 +19,14 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
       rel="stylesheet" type="text/css" />
    <!-- Core theme CSS (includes Bootstrap)-->
-   <link href="../css/styles.css" rel="stylesheet" />
+   <link href="http://localhost/ya/php/blog/css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
    <!-- Navigation-->
    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
       <div class="container px-4 px-lg-5">
-         <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+         <a class="navbar-brand" href="http://localhost/ya/php/blog">Start Bootstrap</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -32,11 +34,11 @@
          </button>
          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
-               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../index.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/ya/php/blog">Home</a></li>
                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../posts/create.html">create</a>
                </li>
-               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="login.php">login</a></li>
-               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="register.php">register</a></li>
+               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/ya/php/blog/auth/login.php">login</a></li>
+               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/ya/php/blog/auth/register.php">register</a></li>
 
 
                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html">Contact</a>

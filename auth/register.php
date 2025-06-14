@@ -16,9 +16,11 @@ if (isset($_POST['reg_form'])) {
             ':uname' => $username,
             ':pwd' => $password
         ]);
+        header("location: index.php");
     }
 }
 ?>
+
 <form method="POST" action="register.php">
     <!-- Email input -->
     <div class="form-outline mb-4">
