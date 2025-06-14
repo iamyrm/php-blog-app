@@ -35,13 +35,14 @@
          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/ya/php/blog">Home</a></li>
-               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../posts/create.html">create</a>
-               </li>
+
 
                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html">Contact</a>
                </li>
 
                <?php if (isset($_SESSION['username'])): ?>
+                  <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/ya/php/blog/posts/create.php">Create</a>
+                  </li>
                   <li class="nav-item dropdown mt-3">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'USER'; ?>

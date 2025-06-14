@@ -24,6 +24,7 @@ if (isset($_POST['login_submit'])) {
         if ($login->rowCount() > 0) {
             if (password_verify($password, $row['pwd'])) {
                 $_SESSION['username'] = $row['uname'];
+                $_SESSION['user_id'] = $row['id'];
                 header("location: http://localhost/ya/php/blog/");
             } else {
                 echo "Crdentials error";
