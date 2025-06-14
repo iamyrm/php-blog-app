@@ -12,20 +12,22 @@ if (isset($_POST['create_blog_form'])) {
         $subtitle = htmlspecialchars($_POST['subtitle'], ENT_QUOTES, 'UTF-8');
         $body_content = htmlspecialchars($_POST['body_content'], ENT_QUOTES, 'UTF-8');
         $user_id = $_SESSION['user_id'];
+        $user_name = $_SESSION['username'];
 
         if ($_FILES['feature_image']['error'] === UPLOAD_ERR_OK) {
             $feature_image = $_FILES['feature_image']['name'];
             $dir = 'images/' . basename($feature_image);
 
             if (move_uploaded_file($_FILES['feature_image']['tmp_name'], $dir)) {
-                $insert = $conn->prepare("INSERT INTO posts (title, subtitle, body_content, feature_image, user_id) VALUES (:title, :subtitle, :body_content, :feature_image, :user_id)");
+                $insert = $conn->prepare("INSERT INTO posts (title, subtitle, body_content, feature_image, user_id,user_name) VALUES (:title, :subtitle, :body_content, :feature_image, :user_id,:user_name)");
 
                 $insert->execute([
                     ':title' => $title,
                     ':subtitle' => $subtitle,
                     ':body_content' => $body_content,
                     ':feature_image' => $feature_image,
-                    ':user_id' => $user_id
+                    ':user_id' => $user_id,
+                    ':user_name' => $user_name
                 ]);
                 header("Location: http://localhost/ya/php/blog");
                 exit;

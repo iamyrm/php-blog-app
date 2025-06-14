@@ -22,7 +22,7 @@ if (isset($_POST['reg_form'])) {
             ':uname' => $username,
             ':pwd' => $password
         ]);
-        header("location: index.php");
+        header("location: http://localhost/ya/php/blog/");
     }
 }
 ?>
