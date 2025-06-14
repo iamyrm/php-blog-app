@@ -4,7 +4,6 @@ include 'includes/header.php';
 
 <div class="row gx-4 gx-lg-5 justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-7">
-        <h1>Hello <?php echo $_SESSION['username']; ?></h1>
         <!-- Post preview-->
         <div class="post-preview">
             <a href="posts/post.html">

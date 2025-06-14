@@ -2,6 +2,12 @@
 include '../includes/header.php';
 require '../config/config.php';
 
+// Redirecting the user to homepage if the user is logged in
+
+if (isset($_SESSION['username'])) {
+    header("location: http://localhost/ya/php/blog/");
+}
+
 if (isset($_POST['reg_form'])) {
     if (empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password'])) {
         echo "Please fill all the input fields";
