@@ -24,51 +24,9 @@
 
 <body>
    <!-- Navigation-->
-   <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-      <div class="container px-4 px-lg-5">
-         <a class="navbar-brand" href="http://localhost/ya/php/blog">MyBlog</a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto py-4 py-lg-0">
-               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/ya/php/blog">Home</a></li>
-
-
-               <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html">Contact</a>
-               </li>
-
-               <?php if (isset($_SESSION['username'])): ?>
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/ya/php/blog/posts/create.php">Create</a>
-                  </li>
-                  <li class="nav-item dropdown mt-3">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'USER'; ?>
-                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="http://localhost/ya/php/blog/auth/logout.php">Logout</a></li>
-                     </ul>
-                  </li>
-               <?php else: ?>
-                  <li class="nav-item dropdown mt-3">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'USER'; ?>
-                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="http://localhost/ya/php/blog/auth/login.php">Login</a></li>
-                        <li><a class="dropdown-item" href="http://localhost/ya/php/blog/auth/register.php">Register</a></li>
-                     </ul>
-                  </li>
-               <?php endif; ?>
-
-            </ul>
-         </div>
-      </div>
-   </nav>
+   <?php include 'nav.php'; ?>
    <!-- Page Header-->
-   <header class="masthead" style="background-image: url('../assets/img/home-bg.jpg')">
+   <header class="masthead" style="background-image: url('http://localhost/ya/php/blog/assets/img/home-bg.jpg')">
       <div class="container position-relative px-4 px-lg-5">
          <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">

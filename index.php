@@ -15,7 +15,7 @@ $rows = $posts->fetchAll(PDO::FETCH_OBJ);
         <?php foreach ($rows as $row): ?>
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="http://localhost/ya/php/blog/posts/post.php">
+                <a href="http://localhost/ya/php/blog/posts/post.php?p_id=<?php echo $row->id; ?>">
                     <h2 class="post-title"><?php echo $row->title; ?></h2>
                     <h3 class="post-subtitle"><?php echo $row->subtitle; ?></h3>
                 </a>
