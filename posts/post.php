@@ -43,6 +43,9 @@ if (isset($_GET['p_id'])) {
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <p><?php echo $posts->body_content; ?></p>
+                <a href="http://localhost/ya/php/blog/posts/delete.php?del_id=<?php echo $posts->id; ?>" class="btn btn-danger text-center float-end" onclick="return confirm('Are you sure you want to delete this post?');">Delete</a>
+
+                <a href="update.php?upd_id=<?php echo $posts->id; ?>" class="btn btn-warning text-center">Update</a>
             </div>
         </div>
     </div>

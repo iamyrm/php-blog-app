@@ -6,9 +6,7 @@ require 'config/config.php';
 $posts = $conn->query("SELECT * FROM posts");
 $posts->execute();
 $rows = $posts->fetchAll(PDO::FETCH_OBJ);
-
 ?>
-
 <div class="row gx-4 gx-lg-5 justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-7">
 
